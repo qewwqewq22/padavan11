@@ -34,6 +34,7 @@ This project is based on original rt-n56u with latest mtk 4.4.198 kernel, which 
 # Supported devices
 
 - CR660x
+- JCG-Q11Pro
 - JCG-Q20
 - JCG-AC860M
 - JCG-836PRO

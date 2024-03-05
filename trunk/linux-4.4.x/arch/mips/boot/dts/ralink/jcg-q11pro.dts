@@ -21,8 +21,18 @@
 			gpios = <&gpio0 14 GPIO_ACTIVE_HIGH>;
 		};
 
-		sys_blue {
+		sys_yellow {
 			label = "power";
+			gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
+		};
+
+		net_yellow {
+			label = "wan_2";
+			gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
+		};
+
+		net_red {
+			label = "wan";
 			gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
 		};
 	};
@@ -41,7 +51,7 @@
 
 		wps {
 			label = "wps";
-			gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_WPS_BUTTON>;
 		};
 	};
@@ -64,11 +74,11 @@
 
 			partition@0 {
 				label = "Bootloader";
-				reg = <0x0 0x80000>; /* 512k */
+				reg = <0x00000 0x80000>; /* 512k */
 			};
 
 			partition@80000 {
-				label = "Config";
+				label = "CFG_Bdata";
 				reg = <0x80000 0x80000>; /* 512k */
 			};
 

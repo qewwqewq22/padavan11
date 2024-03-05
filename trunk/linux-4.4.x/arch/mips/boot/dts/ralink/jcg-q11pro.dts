@@ -16,12 +16,12 @@
 	leds {
 		compatible = "gpio-leds";
 
-		sys_red {
-			label = "power_red";
+		sys_yellow {
+			label = "power_2";
 			gpios = <&gpio0 14 GPIO_ACTIVE_HIGH>;
 		};
 
-		sys_yellow {
+		sys_red {
 			label = "power";
 			gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
 		};

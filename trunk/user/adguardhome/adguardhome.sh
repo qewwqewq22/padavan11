@@ -62,7 +62,7 @@ getconfig(){
   if [ ! -f "$adg_file" ] || [ ! -s "$adg_file" ] ; then
 	  cat > "$adg_file" <<-\EEE
 bind_host: 0.0.0.0
-bind_port: 3030
+bind_port: 3000
 auth_name: adguardhome
 auth_pass: adguardhome
 language: zh-cn
@@ -79,7 +79,7 @@ dns:
   ratelimit_whitelist: []
   refuse_any: true
   bootstrap_dns:
-  - 223.5.5.5
+  - 223.6.6.6
   all_servers: true
   allowed_clients: []
   disallowed_clients: []
@@ -90,7 +90,7 @@ dns:
   safebrowsing_enabled: false
   resolveraddress: ""
   upstream_dns:
-  - 223.5.5.5
+  - 223.6.6.6
 tls:
   enabled: false
   server_name: ""
@@ -133,13 +133,13 @@ start_adg(){
 	getconfig
 	change_dns
 	set_iptable
-	logger -t "AdGuardHome" "启动 AdGuardHome"
+	logger -t "AdGuardHome" "启动 AdGuardHome 成功"
 	eval "AdGuardHome -c $adg_file -w /tmp/AdGuardHome -v" &
 }
 
 stop_adg(){
   rm -rf /tmp/AdGuardHome
-  logger -t "AdGuardHome" "停止 AdGuardHome"
+  logger -t "AdGuardHome" "停止 AdGuardHome 完成"
   killall -9 AdGuardHome
   del_dns
   clear_iptable

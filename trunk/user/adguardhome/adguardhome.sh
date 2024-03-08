@@ -62,7 +62,7 @@ getconfig(){
   if [ ! -f "$adg_file" ] || [ ! -s "$adg_file" ] ; then
 	  cat > "$adg_file" <<-\EEE
 bind_host: 0.0.0.0
-bind_port: 3030
+bind_port: 3000
 auth_name: adguardhome
 auth_pass: adguardhome
 language: zh-cn

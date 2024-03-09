@@ -131,7 +131,7 @@ function done_validating(action){
 								<div class="row-fluid">
 									<div id="tabMenu" class="submenuBlock"></div>
 									<div class="alert alert-info" style="margin: 10px;">
-									<p>AdGuard Home 是一款全网广告拦截与反跟踪软件。它将保护所有家用设备，不再需要安装任何客户端软件。端口改为:3000,默认用户名密码均为adguardhome。
+									<p>AdGuard Home 是一款全网广告拦截与反跟踪软件。它将保护所有家用设备，不再需要安装任何客户端软件。端口:3000,默认用户名密码均为adguardhome。
 									</p>
 									AdGuard Home  主页<a href="https://adguard.com/" target="blank"><i><u>https://adguard.com/</u></i></a>
 									</div>
@@ -165,7 +165,7 @@ function done_validating(action){
 										<tr>
 											<th>WEB管理地址:</th>
 											<td>
-											<a href="http://<% nvram_get_x("", "lan_ipaddr"); %>:3000">http://<% nvram_get_x("", "lan_ipaddr"); %>:3030</a>
+											<a href="http://<% nvram_get_x("", "lan_ipaddr"); %>:3030">http://<% nvram_get_x("", "lan_ipaddr"); %>:3000</a>
 											</td>
 										</tr>
 										

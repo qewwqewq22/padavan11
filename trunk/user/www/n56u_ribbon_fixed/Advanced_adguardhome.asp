@@ -131,7 +131,7 @@ function done_validating(action){
 								<div class="row-fluid">
 									<div id="tabMenu" class="submenuBlock"></div>
 									<div class="alert alert-info" style="margin: 10px;">
-									<p>AdGuard Home 是一款全网广告拦截与反跟踪软件。在您将其安装完毕后，它将保护您所有家用设备，同时您不再需要安装任何客户端软件。随着物联网与连接设备的兴起，掌控您自己的整个网络环境变得越来越重要。默认用户名密码均为adguardhome。
+									<p>AdGuard Home 是一款全网广告拦截与反跟踪软件。它将保护所有家用设备，不再需要安装任何客户端软件。端口改为:3000,默认用户名密码均为adguardhome。
 									</p>
 									AdGuard Home  主页<a href="https://adguard.com/" target="blank"><i><u>https://adguard.com/</u></i></a>
 									</div>

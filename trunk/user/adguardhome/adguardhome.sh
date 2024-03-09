@@ -66,6 +66,8 @@ bind_port: 3030
 auth_name: adguardhome
 auth_pass: adguardhome
 language: zh-cn
+http_proxy: ""
+debug_pprof: false
 rlimit_nofile: 0
 dns:
   bind_host: 0.0.0.0

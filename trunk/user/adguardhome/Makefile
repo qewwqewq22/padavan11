@@ -1,12 +1,12 @@
 include $(ROOTDIR)/rules.mk
 
 PKG_NAME:=AdGuardHome
-PKG_VERSION:=0.107.42
+PKG_VERSION:=0.107.41
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/AdguardTeam/AdGuardHome/archive/refs/tags/
 PKG_SOURCE_URL_FILE:=v$(PKG_VERSION).tar.gz
-PKG_HASH:=10169962e712f2ae1d0bec4e2683342ee7c135f981002292c4c478af6653f429
+PKG_HASH:=e31cde9bc1849def3d54cd10bb6ddae778dfaf28b88d789f664a1a64cc086dd1
 
 include $(INCLUDE_DIR)/package.mk
 

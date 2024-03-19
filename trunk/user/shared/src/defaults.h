@@ -25,7 +25,7 @@
 #define SYS_EXEC_PATH_OPT	"/opt/sbin:/opt/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 #define SYS_HOME_PATH_ROOT	"/home/admin"
 
-#define SYS_USER_ROOT		"router.ctc"
+#define SYS_USER_ROOT		"admin"
 #define SYS_GROUP_ROOT		"root"
 #define SYS_USER_NOBODY		"nobody"
 #define SYS_GROUP_NOGROUP	"nogroup"
@@ -41,10 +41,10 @@
 #define DEF_WLAN_5G_SSID	BOARD_PID "-5mVv-5G"
 #define DEF_WLAN_2G_GSSID	BOARD_PID "-G-5mVv"
 #define DEF_WLAN_5G_GSSID	BOARD_PID "-G-5mVv-5G"
-#define DEF_WLAN_2G_PSK		"XkJSnkx9"
-#define DEF_WLAN_5G_PSK		"XkJSnkx9"
+#define DEF_WLAN_2G_PSK		"0123456789"
+#define DEF_WLAN_5G_PSK		"0123456789"
 
-#define DEF_ROOT_PASSWORD	"w33hjvx2"
+#define DEF_ROOT_PASSWORD	"admin"
 #define DEF_SMB_WORKGROUP	"WORKGROUP"
 #define DEF_TIMEZONE		"CST-8"
 #define DEF_NTP_SERVER0		"ntp1.aliyun.com"

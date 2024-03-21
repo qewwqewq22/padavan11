@@ -103,13 +103,17 @@ tls:
   private_key: ""
 filters:
 - enabled: true
-  url: https://anti-ad.net/adguard.txt
+  url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_21.txt
   name: AdGuard AD
   id: 1
 - enabled: true
   url: https://adaway.org/hosts.txt
   name: AdAway
   id: 2
+  - enabled: true
+  url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_29.txt
+  name: AdRules
+  id: 3
 user_rules: []
 dhcp:
   enabled: false

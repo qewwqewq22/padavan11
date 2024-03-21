@@ -104,7 +104,7 @@ tls:
 filters:
 - enabled: true
   url: https://anti-ad.net/adguard.txt
-  name: AdGuard
+  name: AdGuard AD
   id: 1
 - enabled: true
   url: https://adaway.org/hosts.txt

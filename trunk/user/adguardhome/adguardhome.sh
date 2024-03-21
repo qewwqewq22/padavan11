@@ -63,8 +63,8 @@ getconfig(){
 	  cat > "$adg_file" <<-\EEE
 bind_host: 0.0.0.0
 bind_port: 3030
-auth_name: adguardhome
-auth_pass: adguardhome
+auth_name: admin
+auth_pass: adminhome
 language: zh-cn
 http_proxy: ""
 debug_pprof: false
@@ -103,8 +103,8 @@ tls:
   private_key: ""
 filters:
 - enabled: true
-  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
-  name: AdGuard Simplified Domain Names filter
+  url: https://anti-ad.net/adguard.txt
+  name: AdGuard
   id: 1
 - enabled: true
   url: https://adaway.org/hosts.txt

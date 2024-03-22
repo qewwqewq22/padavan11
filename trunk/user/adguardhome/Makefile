@@ -4,15 +4,15 @@ PKG_NAME:=AdGuardHome
 PKG_VERSION:=0.107.44
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/qewwqewq22/AdGuardHome1/tar.gz/refs/tags/
+PKG_SOURCE_URL:=https://github.com/qewwqewq22/AdGuardHome1/archive/refs/tags/
 PKG_SOURCE_URL_FILE:=v$(PKG_VERSION).tar.gz
 PKG_HASH:=adc459cdd8cde6ae12c56116f5d26655ccaaef86c67564e55b7a0725b48cd7b8
 
 include $(INCLUDE_DIR)/package.mk
 
 LD_FLAGS:= \
-	-X github.com/AdguardTeam/AdGuardHome/internal/version.channel=release \
-	-X github.com/AdguardTeam/AdGuardHome/internal/version.version=$(PKG_VERSION)
+	-X github.com/qewwqewq22/AdGuardHome1/internal/version.channel=release \
+	-X github.com/qewwqewq22/AdGuardHome1/internal/version.version=$(PKG_VERSION)
 
 define Build/Configure
 	(cd $(PKG_BUILD_DIR); \

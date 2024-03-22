@@ -9,7 +9,7 @@
 +	"bytes"
 +	_ "embed"
  
- 	"github.com/AdguardTeam/AdGuardHome/internal/home"
+ 	"github.com/qewwqewq22/AdGuardHome1/internal/home"
  )
 @@ -10,9 +12,14 @@ import (
  // internal directory and the embed package is unable to embed files located

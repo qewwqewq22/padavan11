@@ -65,7 +65,8 @@ bind_host: 0.0.0.0
 bind_port: 3030
 auth_name: admin
 auth_pass: adminhome
-language: zh-cndebug_pprof: false
+language: zh-cn
+debug_pprof: false
 rlimit_nofile: 0
 
 dns:

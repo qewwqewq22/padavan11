@@ -131,7 +131,7 @@ function done_validating(action){
 								<div class="row-fluid">
 									<div id="tabMenu" class="submenuBlock"></div>
 									<div class="alert alert-info" style="margin: 10px;">
-									<p>AdGuard Home 将保护所有家用设备，不再需要安装任何客户端软件。注意端口：3000，用户名：admin，密码：adminhome。
+									<p>AdGuard Home将保护所有家用设备,不需要安装客户端软件。注意端口：3000，用户名：adguardhome，密码：adguardhome。
 									</p>
 									AdGuard Home  主页<a href="https://adguard.com/" target="blank"><i><u>https://adguard.com/</u></i></a>
 									</div>

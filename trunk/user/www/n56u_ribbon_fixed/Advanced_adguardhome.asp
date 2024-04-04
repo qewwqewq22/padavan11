@@ -131,7 +131,7 @@ function done_validating(action){
 								<div class="row-fluid">
 									<div id="tabMenu" class="submenuBlock"></div>
 									<div class="alert alert-info" style="margin: 10px;">
-									<p>AdGuard Home将保护所有家用设备,不需要安装客户端软件。注意端口：3000，用户名：adguardhome，密码：adguardhome。
+									<p>AdGuard Home 将保护所有家用设备，不需要安装客户端软件。注意端口：3000，用户名：adguardhome，密码：adguardhome。
 									</p>
 									AdGuard Home  主页<a href="https://adguard.com/" target="blank"><i><u>https://adguard.com/</u></i></a>
 									</div>
@@ -156,7 +156,7 @@ function done_validating(action){
 											<th><a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 1, 1);">DNS重定向</a></th>
 											<td>
 												<select name="adg_redirect" class="input" style="width: 200px">
-													<option value="0" <% nvram_match_x("","adg_redirect", "0","selected"); %>>无</option>
+													<option value="0" <% nvram_match_x("","adg_redirect", "0","selected"); %>>默认</option>
 													<option value="1" <% nvram_match_x("","adg_redirect", "1","selected"); %>>作为dnsmasq的上游服务器</option>
 													<option value="2" <% nvram_match_x("","adg_redirect", "2","selected"); %>>重定向53端口到AdGuardHome</option>
 												</select>

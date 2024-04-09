@@ -28,10 +28,10 @@
 
 		net_yellow {
 			label = "wan_2";
-			gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
 		};
 
-		net_red{
+		net_yellow{
 			label = "wan";
 			gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
 		};

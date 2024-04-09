@@ -31,7 +31,7 @@
 			gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
 		};
 
-		net_yellow{
+		net_red{
 			label = "wan";
 			gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
 		};

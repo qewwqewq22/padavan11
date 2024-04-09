@@ -23,7 +23,7 @@
 
 		net_yellow {
 			label = "wifi";
-			gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 16 GPIO_ACTIVE_HIGH>;
 		};
 
 		net_red{

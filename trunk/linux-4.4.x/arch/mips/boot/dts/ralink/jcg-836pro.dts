@@ -6,6 +6,7 @@
 #include "mt7621-raeth-gmac2.dtsi"
 #include "mt7621-pinctrl-default-gpio.dtsi"
 
+
 / {
 	compatible = "mediatek,mt7621-soc";
 	model = "JCG 836PRO";

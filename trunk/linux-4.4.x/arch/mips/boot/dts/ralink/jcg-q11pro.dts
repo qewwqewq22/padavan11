@@ -22,8 +22,8 @@
 		};
 
 		net_yellow {
-			label = "wan_2";
-			gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
+			label = "wifi";
+			gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
 		};
 
 		net_red{

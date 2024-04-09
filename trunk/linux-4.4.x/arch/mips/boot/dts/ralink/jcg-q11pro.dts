@@ -18,7 +18,7 @@
 
 		sys_yellow {
 			label = "power_2";
-			gpios = <&gpio0 14 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio0 14 GPIO_ACTIVE_LOW>;
 		};
 
 		sys_red {
@@ -28,12 +28,12 @@
 
 		net_yellow {
 			label = "wan_2";
-			gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
 		};
 
 		net_red{
 			label = "wan";
-			gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
 		};
 	};
 

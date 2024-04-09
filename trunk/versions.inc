@@ -1,3 +1,3 @@
 FIRMWARE_ROOTFS_VER=19.8
 FIRMWARE_BUILDS_VER=1
-FIRMWARE_BUILDS_REV=$(shell date +24%m04 2>/dev/null)
+FIRMWARE_BUILDS_REV=$(shell date +%Y%m%d 2>/dev/null)

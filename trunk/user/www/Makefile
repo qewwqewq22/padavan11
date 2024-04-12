@@ -211,10 +211,8 @@ endif
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_ZEROTIER),y)
 	rm -f $(INSTALLDIR)/www/Advanced_zerotier.asp
 endif
-ifeq ($(CONFIG_FIRMWARE_INCLUDE_FRPC),y)
+ifeq ($(CONFIG_FIRMWARE_INCLUDE_FRPC)_$(CONFIG_FIRMWARE_INCLUDE_FRPS),y_y)
 	rm -f $(INSTALLDIR)/www/Advanced_frp.asp
-endif
-ifneq ($(CONFIG_FIRMWARE_INCLUDE_FRPS),y)
 	rm -f $(INSTALLDIR)/www/Advanced_frp_log.asp
 endif
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_DDNSTO),y)

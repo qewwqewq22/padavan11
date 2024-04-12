@@ -488,10 +488,8 @@ if (found_app_sqm()){
 	tablink[18] = (sqm_array);
 }
 if (found_app_frp()){
-	frp_array = new Array("","Advanced_frp.asp");
+	frp_array = new Array("","Advanced_frp.asp","Advanced_frp_log.asp");
 	tablink[19] = (frp_array);
-	tabtitle[19].push('<#menu5_25_1#>');
-	tablink[19].push('Advanced_frp_log.asp');
 }
 
 //Level 2 Menu

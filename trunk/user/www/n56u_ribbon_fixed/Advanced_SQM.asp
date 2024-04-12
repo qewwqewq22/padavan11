@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>
-        <#Web_Title#> - <#menu5_13_log#></title>
+        <#Web_Title#> - <#menu5_37_1#></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
@@ -143,13 +143,13 @@ function getHash(){
                     <div class="row-fluid">
                         <div class="span12">
                             <div class="box well grad_colour_dark_blue">
-                                <h2 class="box_head round_top">SQM QoS - <#menu5_37#></h2>
+                                <h2 class="box_head round_top"><#menu5_37#> - <#menu5_37_1#></h2>
                                 <div class="round_bottom">
                                     <div>
                             <ul class="nav nav-tabs" style="margin-bottom: 10px;">
                                 
                                 <li class="active">
-                                    <a href="Advanced_SQM.asp">SQM QOS</a>
+                                    <a href="Advanced_SQM.asp"><#menu5_37_1#></a>
                                 </li>
                             </ul>
                         </div>

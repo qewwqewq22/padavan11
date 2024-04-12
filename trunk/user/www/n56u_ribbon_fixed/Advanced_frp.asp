@@ -9,12 +9,13 @@
 <link rel="shortcut icon" href="images/favicon.ico">
 <link rel="icon" href="images/favicon.png">
 <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/iconmoon/css/iconmoon.css">
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/simple.switch.three.css">
 <link rel="stylesheet" type="text/css" href="/bootstrap/css/main.css">
-<link rel="stylesheet" type="text/css" href="/bootstrap/css/engage.itoggle.css">
 
 <script type="text/javascript" src="/jquery.js"></script>
 <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/bootstrap/js/engage.itoggle.min.js"></script>
+<script type="text/javascript" src="/bootstrap/js/simple.switch.min.js"></script>
 <script type="text/javascript" src="/state.js"></script>
 <script type="text/javascript" src="/general.js"></script>
 <script type="text/javascript" src="/itoggle.js"></script>
@@ -37,11 +38,11 @@ $j(document).ready(function() {
 
 function initial(){
 	show_banner(2);
-	show_menu(5,18);
+	show_menu('if-m1-syssettings', 'if-m2-frp');
 	show_footer();
 
-fill_status(frpc_status());
-fill_status2(frps_status());
+	fill_status(frpc_status());
+	fill_status2(frps_status());
 	if (!login_safe())
 		textarea_scripts_enabled(0);
 }
@@ -88,7 +89,7 @@ function done_validating(action){
 </head>
 
 <body onload="initial();" onunLoad="return unload_body();">
-
+<div id="Loading" class="popup_bg"></div>
 <div class="wrapper">
 	<div class="container-fluid" style="padding-right: 0px">
 		<div class="row-fluid">
@@ -98,8 +99,6 @@ function done_validating(action){
 			</div>
 		</div>
 	</div>
-
-	<div id="Loading" class="popup_bg"></div>
 
 	<iframe name="hidden_frame" id="hidden_frame" src="" width="0" height="0" frameborder="0"></iframe>
 
@@ -141,38 +140,38 @@ function done_validating(action){
 							<div class="round_bottom">
 								<div class="row-fluid">
 									<div id="tabMenu" class="submenuBlock"></div>
-									<div class="alert alert-info" style="margin: 10px;">frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp 协议，为 http 和 https 应用协议提供了额外的能力，且尝试性支持了点对点穿透。
+									<div class="alert alert-info" style="margin: 10px;">FRP 是一个可用于内网穿透的高性能的反向代理应用，支持 TCP、UDP 协议，为 HTTP 和 HTTPS 应用协议提供了额外的能力，且尝试性支持了点对点穿透。
 									</div>
 
 									<table width="100%" align="center" cellpadding="4" cellspacing="0" class="table">
-									<tr> <th>frpc<#running_status#></th>
+									<tr> <th>客户端<#running_status#></th>
                                             <td id="frpc_status" colspan="2"></td>
                                         </tr>
-										<tr> <th>frps<#running_status#></th>
+										<tr> <th>服务端<#running_status#></th>
                                             <td id="frps_status" colspan="2"></td>
                                         </tr>
 										<tr>
-											<th width="30%"><a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 26, 9);">启用frpc</a></th>
+											<th width="30%">
+												<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 26, 9);">启用 FRPC 客户端</a>
+											</th>
 											<td>
-													<div class="main_itoggle">
-													<div id="frpc_enable_on_of">
+												
 														<input type="checkbox" id="frpc_enable_fake" <% nvram_match_x("", "frpc_enable", "1", "value=1 checked"); %><% nvram_match_x("", "frpc_enable", "0", "value=0"); %>  />
-													</div>
-												</div>
+												
 												<div style="position: absolute; margin-left: -10000px;">
 													<input type="radio" value="1" name="frpc_enable" id="frpc_enable_1" class="input" value="1" <% nvram_match_x("", "frpc_enable", "1", "checked"); %> /><#checkbox_Yes#>
 													<input type="radio" value="0" name="frpc_enable" id="frpc_enable_0" class="input" value="0" <% nvram_match_x("", "frpc_enable", "0", "checked"); %> /><#checkbox_No#>
 												</div>
 											</td>
 										</tr>
-												<tr>
-											<th width="30%"><a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 26, 9);">启用frps</a></th>
+										<tr>
+											<th width="30%">
+												<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 26, 9);">启用 FRPS 服务端</a>
+											</th>
 											<td>
-													<div class="main_itoggle">
-													<div id="frps_enable_on_of">
+												
 														<input type="checkbox" id="frps_enable_fake" <% nvram_match_x("", "frps_enable", "1", "value=1 checked"); %><% nvram_match_x("", "frps_enable", "0", "value=0"); %>  />
-													</div>
-												</div>
+												
 												<div style="position: absolute; margin-left: -10000px;">
 													<input type="radio" value="1" name="frps_enable" id="frps_enable_1" class="input" value="1"  <% nvram_match_x("", "frps_enable", "1", "checked"); %> /><#checkbox_Yes#>
 													<input type="radio" value="0" name="frps_enable" id="frps_enable_0" class="input" value="0"  <% nvram_match_x("", "frps_enable", "0", "checked"); %> /><#checkbox_No#>
@@ -181,7 +180,7 @@ function done_validating(action){
 										</tr>
 										<tr id="row_post_wan_script">
 											<td colspan="2">
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script2')"><span>frp脚本-请自行配置脚本里的相关参数</span></a>
+												<i class="if if-tip-hand-right"></i> <a href="javascript:spoiler_toggle('script2')"><span>FRP 客户端与服务端配置文件</span></a>
 												<div id="script2">
 													<textarea rows="18" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.frp_script.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.frp_script.sh",""); %></textarea>
 												</div>

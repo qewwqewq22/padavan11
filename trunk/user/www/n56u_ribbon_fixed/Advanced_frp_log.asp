@@ -3,7 +3,8 @@
 
 <head>
     <title>
-        <#Web_Title#> - <#menu5_13_log#></title>
+        <#Web_Title#> - <#menu5_25_1#>
+    </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="-1">
@@ -11,12 +12,13 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/iconmoon/css/iconmoon.css">
     <link rel="stylesheet" type="text/css" href="/bootstrap/css/main.css">
-    <link rel="stylesheet" type="text/css" href="/bootstrap/css/engage.itoggle.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/simple.switch.three.css">
 
     <script type="text/javascript" src="/jquery.js"></script>
     <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/bootstrap/js/engage.itoggle.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/simple.switch.min.js"></script>
     <script type="text/javascript" src="/state.js"></script>
     <script type="text/javascript" src="/general.js"></script>
     <script type="text/javascript" src="/itoggle.js"></script>
@@ -58,6 +60,8 @@
 
 <body onload="initial();" onunLoad="return unload_body();">
 
+    <div id="Loading" class="popup_bg"></div>
+
     <div class="wrapper">
         <div class="container-fluid" style="padding-right: 0px">
             <div class="row-fluid">
@@ -71,8 +75,6 @@
                 </div>
             </div>
         </div>
-
-        <div id="Loading" class="popup_bg"></div>
 
         <iframe name="hidden_frame" id="hidden_frame" src="" width="0" height="0" frameborder="0"></iframe>
 

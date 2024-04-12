@@ -421,10 +421,10 @@ if (found_app_aldriver()){
 	tabtitle[17] = new Array("", "<#menu5_36#>");
 }
 if (found_app_sqm()){
-	tabtitle[18] = new Array("", "<#menu5_37#>");
+	tabtitle[18] = new Array("", "<#menu5_37_1#>");
 }
 if (found_app_frp()){
-	tabtitle[19] = new Array("", "<#menu5_25#>");
+	tabtitle[19] = new Array("", "<#menu5_25_1#>","<#menu5_13_log#>");
 }
 
 //Level 3 Tab title

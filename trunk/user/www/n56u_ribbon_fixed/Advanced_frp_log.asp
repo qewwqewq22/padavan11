@@ -3,8 +3,7 @@
 
 <head>
     <title>
-        <#Web_Title#> - <#menu5_25_1#>
-    </title>
+        <#Web_Title#> - <#menu5_13_log#></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="-1">

@@ -90,22 +90,22 @@
 
 			partition@200000 {
 				label = "firmware";
-				reg = <0x200000 0x2400000>; /* 36M */
+				reg = <0x200000 0x3000000>; /* 48M */
 			};
 
 			partition@1a00000 {
 				label = "Config";
-				reg = <0x2600000 0x80000>; /* 512K */
+				reg = <0x3200000 0x80000>; /* 512K */
 			};
 
 			partition@1a80000 {
 				label = "Storage";
-				reg = <0x2680000 0x400000>; /* 4096K */
+				reg = <0x3280000 0x400000>; /* 4096K */
 			};
 
 			partition@1e80000 {
 				label = "RWFS";
-				reg = <0x2a80000 0x7000000>; /* 69.5M */
+				reg = <0x3680000 0x7000000>; /* 60M */
 			};
 
 			partition@all {

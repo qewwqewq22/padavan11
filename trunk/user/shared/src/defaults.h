@@ -36,7 +36,7 @@
 #define DEF_LAN_MASK		"255.255.255.0"
 
 #define DEF_WLAN_2G_CC		"US"
-#define DEF_WLAN_5G_CC		"US"
+#define DEF_WLAN_5G_CC		"TW"
 #define DEF_WLAN_2G_SSID	BOARD_PID "-5mVv"
 #define DEF_WLAN_5G_SSID	BOARD_PID "-5mVv-5G"
 #define DEF_WLAN_2G_GSSID	BOARD_PID "-G-5mVv"

@@ -9,7 +9,7 @@ include $(BOARD_CONFIG)
 PROJECT_HOME_URL="https:\/\/bitbucket.org\/padavan\/rt-n56u\/"
 PROJECT_HOME_URL_MOD="https:\/\/github.com\/tsl0922\/padavan\/"
 
-LABEL_COPYRIGHT_TEXT='© 2011-2021 <a href="https:\/\/bitbucket.org\/padavan\/rt-n56u" target="blank">Padavan<\/a> \& N56U project community \& <a href="https:\/\/github.com\/hanwckf\/rt-n56u" target="blank">hanwckf<\/a> \& <a href="https:\/\/github.com\/tsl0922\/padavan" target="blank">tsl0922<\/a>'
+LABEL_COPYRIGHT_TEXT='© 2024 <a href="https:\/\/bitbucket.org\/padavan\/rt-n56u" target="blank">Padavan<\/a> \& N56U project community \& <a href="https:\/\/github.com\/hanwckf\/rt-n56u" target="blank">hanwckf<\/a> \& <a href="https:\/\/github.com\/tsl0922\/padavan" target="blank">tsl0922<\/a>'
 
 BOARD_PATTERN=s/ZVMODELVZ/$(CONFIG_FIRMWARE_PRODUCT_ID)/g
 COPYR_PATTERN=s/ZVCOPYRVZ/$(LABEL_COPYRIGHT_TEXT)/g
@@ -211,7 +211,7 @@ endif
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_ZEROTIER),y)
 	rm -f $(INSTALLDIR)/www/Advanced_zerotier.asp
 endif
-ifeq ($(CONFIG_FIRMWARE_INCLUDE_FRPC)_$(CONFIG_FIRMWARE_INCLUDE_FRPS), n_n)
+ifeq ($(CONFIG_FIRMWARE_INCLUDE_FRPC)_$(CONFIG_FIRMWARE_INCLUDE_FRPS),y_y)
 	rm -f $(INSTALLDIR)/www/Advanced_frp.asp
 	rm -f $(INSTALLDIR)/www/Advanced_frp_log.asp
 endif

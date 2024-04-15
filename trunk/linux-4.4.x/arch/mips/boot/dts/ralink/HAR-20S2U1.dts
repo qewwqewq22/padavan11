@@ -17,7 +17,7 @@
 		compatible = "gpio-leds";
 
 		sys_red {
-			label = "power";
+			label = "power_2";
 			gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
 		};
 

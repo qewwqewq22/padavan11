@@ -47,7 +47,7 @@
 
 		wps {
 			label = "wps";
-			gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_WPS_BUTTON>;
 		};
 	};

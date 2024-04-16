@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        target: [HAR-20S2U1,JCG-Q11Pro]
+        target: [JCG-Q11Pro]
         toolchain: [mipsel-linux-musl]
     steps:
       - uses: actions/checkout@v3

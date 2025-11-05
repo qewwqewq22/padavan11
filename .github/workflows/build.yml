@@ -4,7 +4,7 @@ on:
   workflow_dispatch: {}
   push:
     branches:
-      - main
+      - JCG-Q11Pro
 jobs:
   deploy:
     runs-on: ubuntu-latest

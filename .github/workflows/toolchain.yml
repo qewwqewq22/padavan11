@@ -1,34 +1,39 @@
-
-name: toolchain
 on:
-  workflow_dispatch: {}
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+
 jobs:
-  deploy:
+  build:
+    name: Build ${{ matrix.target }}
     runs-on: ubuntu-latest
     permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [mipsel-linux-musl, mipsel-linux-uclibc]
+
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@main
+
+      - name: Install Build Dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y bison flex gperf help2man libtool-bin texinfo
+
+      - name: Build and Package
+        run: |
+          make CT_TARGET=${{ matrix.target }}
+          cd "${{ matrix.target }}"
+          tar cJf "../${{ matrix.target }}.tar.xz" .
+        working-directory: toolchain
+
+      - uses: actions/upload-artifact@main
         with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
+          name: ${{ matrix.target }}
+          path: toolchain/${{ matrix.target }}.tar.xz
+
+      - uses: ncipollo/release-action@main
         with:
-          node-version: 20
-          cache: npm
-      - run: npm ci
-      - name: Build
-        run: npm run docs:build
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/.vitepress/dist
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+          tag: toolchain
+          artifacts: toolchain/${{ matrix.target }}.tar.xz
+          allowUpdates: true
+          omitBodyDuringUpdate: true

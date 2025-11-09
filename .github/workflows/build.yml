@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [RM2100]
+        target: [JCQ-Q11Pro]
         toolchain: [mipsel-linux-musl]
 
     steps:
